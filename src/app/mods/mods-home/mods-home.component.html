@@ -1,2 +1,9 @@
 <app-devider>Modal Module</app-devider>
-<app-modal></app-modal>
+<button (click)="showmdl()" class="ui download primary button">Show modal</button>
+<app-modal *ngIf="modalOpen" (close)="showmdl()">
+    <div modalTitle> This is a reusable title </div>
+    <p>Reuable paragraph element</p>
+</app-modal>
+
+<app-devider>Accordion component</app-devider>
+<app-accordion [items]="items"></app-accordion>
